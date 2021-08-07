@@ -1,0 +1,22 @@
+#DB 설정
+
+DATABASE = "cheer"
+DB_USER = "admin"
+DB_PASSWORD = "cheersdev"
+DB_HOST = "cheers-dev.c08wddzuye5l.ap-northeast-2.rds.amazonaws.com"
+
+jwt_secret = "best safe app server ever"
+jwt_expiration = "10000"
+
+KAKAO_URL = "https://kapi.kakao.com/v2/user/me"
+KAKAO_CLIENT_ID = "bccec09b58a2ed8689fb3b6877dadb16"
+
+FACEBOOKURL = "https://graph.facebook.com/v10.0/me"
+
+NAVERURL = "https://openapi.naver.com/v1/nid/me"
+
+GOOGLEURL = "https://www.googleapis.com/userinfo/v2/me"
+
+JWT_SECRET=JwTsEcReTkEyOrHaShInGsEgs
+
+

@@ -1,0 +1,9 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    ["wildcard"],
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-optional-chaining",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "cheersdev",
+    "database": "cheer",
+    "host": "cheers-dev.c08wddzuye5l.ap-northeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}

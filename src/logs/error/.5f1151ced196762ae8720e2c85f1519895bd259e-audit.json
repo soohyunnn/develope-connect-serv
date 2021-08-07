@@ -1,0 +1,64 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "logs/error/.5f1151ced196762ae8720e2c85f1519895bd259e-audit.json",
+    "files": [
+        {
+            "date": 1627114821119,
+            "name": "logs/error/2021-07-24.error.log",
+            "hash": "a022fff2324ea1a52ba545eb55108d2c"
+        },
+        {
+            "date": 1627173512602,
+            "name": "logs/error/2021-07-25.error.log",
+            "hash": "d746733466ee3a22c68075c2c2955556"
+        },
+        {
+            "date": 1627272937533,
+            "name": "logs/error/2021-07-26.error.log",
+            "hash": "380b6888ec8e3e041ca51155660ba099"
+        },
+        {
+            "date": 1627356634350,
+            "name": "logs/error/2021-07-27.error.log",
+            "hash": "6ef09c46bde9f0aa5892b0b67956274c"
+        },
+        {
+            "date": 1627427322671,
+            "name": "logs/error/2021-07-28.error.log",
+            "hash": "93a1a211ad9a2dbb0e2a332cd287bdcd"
+        },
+        {
+            "date": 1627503569082,
+            "name": "logs/error/2021-07-29.error.log",
+            "hash": "dc1ec8dfb30a1fa3f481e7ba0ddc6a24"
+        },
+        {
+            "date": 1627570853757,
+            "name": "logs/error/2021-07-30.error.log",
+            "hash": "9690d91be3a2ded067a5bafca3ffbce5"
+        },
+        {
+            "date": 1627692745309,
+            "name": "logs/error/2021-07-31.error.log",
+            "hash": "751d6525f3d3b1520d24d2f942a94ece"
+        },
+        {
+            "date": 1627781095789,
+            "name": "logs/error/2021-08-01.error.log",
+            "hash": "9193883c298c6e67470de24cd9a2243d"
+        },
+        {
+            "date": 1627864298775,
+            "name": "logs/error/2021-08-02.error.log",
+            "hash": "8149a9576bffbaf546280ed8dba4d87a"
+        },
+        {
+            "date": 1627949775872,
+            "name": "logs/error/2021-08-03.error.log",
+            "hash": "83a454458a93fab887f0dc30e3383df4"
+        }
+    ]
+}

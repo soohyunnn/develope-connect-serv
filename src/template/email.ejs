@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      span {
+        font-family: "Roboto", sans-serif !important;
+        font-weight: 400;
+        color: #222;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      style="
+        display: grid;
+        width: 760px;
+        box-sizing: border-box;
+        border: 1px solid #f2f2f2;
+      "
+    >
+      <div
+        style="
+          display: grid;
+          padding: 0px 40px;
+          grid-template-columns: auto auto;
+        "
+      >
+        <img
+          style="
+            grid-column-start: 1;
+            grid-column-end: 3;
+            margin-top: 50px;
+            width: 70px;
+            object-fit: contain;
+          "
+          alt="logo"
+          src="http://13.125.60.249:5000/download?id=510"
+        />
+        <span
+          style="
+            grid-column-start: 1;
+            grid-column-end: 3;
+            color: #222;
+            font-size: 24px;
+            font-family: 'Barlow', sans-serif !important;
+            font-weight: 700;
+            line-height: 36px;
+          "
+          ><%= title %></span
+        >
+        <span
+          style="
+            font-size: 14px;
+            line-height: 22px;
+            color: #777;
+            margin-top: 12px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+          "
+          ><%= message %>
+        </span>
+
+        <a
+          href="<%= link %>"
+          style="
+            color: black;
+            font-size: 17px;
+            font-weight: 700;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+          "
+          ,target="_blank"
+        >
+          <%= link %></a
+        >
+
+        <button
+          style="
+            display: flex;
+            width: 250px;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+            background-color: #ed7730;
+            margin-bottom: 20px;
+          "
+        >
+          <a
+            href="<%= link %>"
+            style="
+              color: white;
+              font-size: 17px;
+              font-weight: 700;
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+            "
+          >
+            이메일 인증 완료</a
+          >
+        </button>
+
+        <!-- <span
+          style="
+            font-size: 13px;
+            margin-top: 100px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            line-height: 30px;
+            color: #ababab;
+          "
+          >This email is for outgoing purposes only. If you need any help,
+          please contact the Customer Service Center of the app.</span
+        > -->
+      </div>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: auto auto;
+          background-color: #f2f2f2;
+          padding: 30px 40px;
+          align-items: center;
+        "
+      >
+        <!-- <img
+          style="
+            object-fit: contain;
+
+            width: 70px;
+            margin-right: 20px;
+            height: 43px;
+          "
+          alt="logo"
+          src="http://13.125.60.249:5000/download?id=510"
+        /> -->
+        <div style="display: grid; flex-direction: column">
+          <span
+            style="
+              font-family: 'Barlow', sans-serif !important;
+              font-weight: 700;
+
+              font-size: 14px;
+              color: #777;
+            "
+            >@2021 CHEERS</span
+          >
+          <span
+            style="
+              margin-top: 5px;
+              font-family: 'Barlow', sans-serif !important;
+              font-weight: 400;
+              font-size: 12px;
+              color: #777;
+            "
+            >경기도 파주시 중앙로 191 스토리빌딩 202호</span
+          >
+          <span
+            style="
+              margin-top: 5px;
+              font-family: 'Barlow', sans-serif !important;
+              font-weight: 400;
+              font-size: 12px;
+              color: #777;
+            "
+            >대표이사: 공영호 | 사업자등록번호: 412-20-01379</span
+          >
+          <span
+            style="
+              color: #ababab;
+              font-size: 11px;
+              font-family: 'Barlow', sans-serif !important;
+              font-weight: 400;
+              margin-top: 14px;
+            "
+            >cherrs.fun | E-mail: info@cheers.fun</span
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
