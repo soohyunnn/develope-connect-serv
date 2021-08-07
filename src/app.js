@@ -1,7 +1,6 @@
 import express from "express";
 import models from "./models";
 import swaggerUi from "swagger-ui-express";
-import { getThumbnail } from "./controllers/file/ffmpeg.js";
 import { logger } from "./config/winston.js";
 import swaggerDocument from "./modules/swaggerDoc.js";
 import sequelize from "./models";
@@ -12,8 +11,6 @@ import path, { resolve } from "path";
 import admin from "firebase-admin";
 import serviceAccount from "./cheers-1904e-firebase-adminsdk-95nfu-b853e7916b.json";
 import cors from "cors";
-import multer from "multer";
-import fs from "fs";
 import session from "express-session";
 import controller from "./controllers";
 import send from "./controllers/push/firebaePush";
@@ -52,65 +49,65 @@ app.use(
 );
 
 console.log("dirname", __dirname);
-app.use("/public", express.static(__dirname + "public"));
+// app.use("/public", express.static(__dirname + "public"));
 
-//multer 미들웨어 파일 제한 값 (Doc 공격으로부터 서버를 보호하는데 도움이 된다.)
-const limits = {
-  fieldNameSize: 200, // 필드명 사이즈 최대값 (기본값 100bytes)
-  filedSize: 1024 * 1024, // 필드 사이즈 값 설정 (기본값 1MB)
-  fields: 2, // 파일 형식이 아닌 필드의 최대 개수 (기본 값 무제한)
-  fileSize: 16777216, //multipart 형식 폼에서 최대 파일 사이즈(bytes) "16MB 설정" (기본 값 무제한)
-  files: 10, //multipart 형식 폼에서 파일 필드 최대 개수 (기본 값 무제한)
-};
+// //multer 미들웨어 파일 제한 값 (Doc 공격으로부터 서버를 보호하는데 도움이 된다.)
+// const limits = {
+//   fieldNameSize: 200, // 필드명 사이즈 최대값 (기본값 100bytes)
+//   filedSize: 1024 * 1024, // 필드 사이즈 값 설정 (기본값 1MB)
+//   fields: 2, // 파일 형식이 아닌 필드의 최대 개수 (기본 값 무제한)
+//   fileSize: 16777216, //multipart 형식 폼에서 최대 파일 사이즈(bytes) "16MB 설정" (기본 값 무제한)
+//   files: 10, //multipart 형식 폼에서 파일 필드 최대 개수 (기본 값 무제한)
+// };
 
-const fileFilter = (req, file, callback) => {
-  const typeArray = file.mimetype.split("/");
+// const fileFilter = (req, file, callback) => {
+//   const typeArray = file.mimetype.split("/");
 
-  const fileType = typeArray[1]; // 이미지 확장자 추출
+//   const fileType = typeArray[1]; // 이미지 확장자 추출
 
-  //이미지 확장자 구분 검사
-  if (fileType == "jpg" || fileType == "jpeg" || fileType == "png") {
-    callback(null, true);
-  } else {
-    return callback(
-      { message: "*.jpg, *.jpeg, *.png 파일만 업로드가 가능합니다." },
-      false
-    );
-  }
-};
+//   //이미지 확장자 구분 검사
+//   if (fileType == "jpg" || fileType == "jpeg" || fileType == "png") {
+//     callback(null, true);
+//   } else {
+//     return callback(
+//       { message: "*.jpg, *.jpeg, *.png 파일만 업로드가 가능합니다." },
+//       false
+//     );
+//   }
+// };
 
-//파일명, 파일경로를 변경해주고자 할 때(파일명 뒤에 확장자 붙임!)
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    // 파일이 업로드될 경로 설정
-    cb(null, "../uploads/");
-  },
-  filename: (req, file, cb) => {
-    // timestamp를 이용해 새로운 파일명 설정
-    let newFileName = new Date().valueOf() + path.extname(file.originalname);
-    let type = file.mimetype.split("/")[1];
-    logger.info(`originalname ${JSON.stringify(file)}`);
-    // console.log("type", type);
-    if (type === "jpeg" || type === "png" || type === "jpg") {
-      let newFileName1 =
-        file.originalname.split(".")[0] +
-        "_" +
-        newFileName.split(".")[0] +
-        ".png";
-      // console.log("newFileName", newFileName);
-      cb(null, newFileName1);
-    } else {
-      let newFileName1 =
-        file.originalname.split(".")[0] +
-        "_" +
-        newFileName.split(".")[0] +
-        ".mp4";
-      // console.log("newFileName", newFileName);
-      cb(null, newFileName1);
-    }
-  },
-});
-const upload = multer({ storage: storage });
+// //파일명, 파일경로를 변경해주고자 할 때(파일명 뒤에 확장자 붙임!)
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     // 파일이 업로드될 경로 설정
+//     cb(null, "../uploads/");
+//   },
+//   filename: (req, file, cb) => {
+//     // timestamp를 이용해 새로운 파일명 설정
+//     let newFileName = new Date().valueOf() + path.extname(file.originalname);
+//     let type = file.mimetype.split("/")[1];
+//     logger.info(`originalname ${JSON.stringify(file)}`);
+//     // console.log("type", type);
+//     if (type === "jpeg" || type === "png" || type === "jpg") {
+//       let newFileName1 =
+//         file.originalname.split(".")[0] +
+//         "_" +
+//         newFileName.split(".")[0] +
+//         ".png";
+//       // console.log("newFileName", newFileName);
+//       cb(null, newFileName1);
+//     } else {
+//       let newFileName1 =
+//         file.originalname.split(".")[0] +
+//         "_" +
+//         newFileName.split(".")[0] +
+//         ".mp4";
+//       // console.log("newFileName", newFileName);
+//       cb(null, newFileName1);
+//     }
+//   },
+// });
+// const upload = multer({ storage: storage });
 
 //파일을 저장할 디렉토리 설정 (현재 위치에 uploads라는 폴더가 생성되고 하위에 파일이 생성된다.)
 // const upload = multer({
@@ -262,105 +259,105 @@ const push = async (tokenList, title, message) => {
   return mapTest;
 };
 
-app.post("/single/upload", upload.single("file"), (req, res, next) => {
-  const { mimetype, destination, filename, path, size } = req.file;
-  const { name } = req.body;
-  const type = mimetype.split("/")[1];
-  logger.info(`upload file : ${JSON.stringify(req.file)}`);
+// app.post("/single/upload", upload.single("file"), (req, res, next) => {
+//   const { mimetype, destination, filename, path, size } = req.file;
+//   const { name } = req.body;
+//   const type = mimetype.split("/")[1];
+//   logger.info(`upload file : ${JSON.stringify(req.file)}`);
 
-  //이미지 일 경우
-  if (type === "jpeg" || type === "png" || type === "jpg") {
-    const insertFile = async () => {
-      return await models.Files.create({
-        content_type: mimetype,
-        extension: mimetype.split("/")[1],
-        filename: filename,
-        path: path,
-        size: size,
-      });
-    };
+//   //이미지 일 경우
+//   if (type === "jpeg" || type === "png" || type === "jpg") {
+//     const insertFile = async () => {
+//       return await models.Files.create({
+//         content_type: mimetype,
+//         extension: mimetype.split("/")[1],
+//         filename: filename,
+//         path: path,
+//         size: size,
+//       });
+//     };
 
-    insertFile().then((d) => {
-      res.json({ ok: true, data: d.dataValues });
-    });
-  } else {
-    const result = getThumbnail(path);
+//     insertFile().then((d) => {
+//       res.json({ ok: true, data: d.dataValues });
+//     });
+//   } else {
+//     const result = getThumbnail(path);
 
-    filename.split(".")[0];
+//     filename.split(".")[0];
 
-    const thumbnailInsertFile = async () => {
-      return await models.Files.create({
-        content_type: "image/png",
-        extension: "png",
-        filename: "thumbnail-" + filename.split(".")[0] + ".png",
-        path:
-          "../uploads/thumbnails/thumbnail-" + filename.split(".")[0] + ".png",
-        size: size,
-      });
-    };
+//     const thumbnailInsertFile = async () => {
+//       return await models.Files.create({
+//         content_type: "image/png",
+//         extension: "png",
+//         filename: "thumbnail-" + filename.split(".")[0] + ".png",
+//         path:
+//           "../uploads/thumbnails/thumbnail-" + filename.split(".")[0] + ".png",
+//         size: size,
+//       });
+//     };
 
-    thumbnailInsertFile().then((d) => {
-      const insertFile = async () => {
-        return await models.Files.create({
-          content_type: "video/mp4",
-          extension: mimetype.split("/")[1],
-          filename: filename,
-          path: path,
-          size: size,
-          thumbnailId: d.dataValues.id,
-        });
-      };
+//     thumbnailInsertFile().then((d) => {
+//       const insertFile = async () => {
+//         return await models.Files.create({
+//           content_type: "video/mp4",
+//           extension: mimetype.split("/")[1],
+//           filename: filename,
+//           path: path,
+//           size: size,
+//           thumbnailId: d.dataValues.id,
+//         });
+//       };
 
-      insertFile().then((d) => {
-        res.json({ ok: true, data: d.dataValues });
-      });
-    });
-  }
-});
+//       insertFile().then((d) => {
+//         res.json({ ok: true, data: d.dataValues });
+//       });
+//     });
+//   }
+// });
 
-app.get("/download", function (req, res) {
-  // 요청시 해당 파일의 id값을 쿼리로 붙여서 전달합니다.(선택된 파일을 DB에서 찾기 위해)
-  // id를 사용해 데이터를 찾음
-  const result = async () => {
-    return await models.Files.findOne({
-      where: { id: req.query.id },
-    });
-  };
+// app.get("/download", function (req, res) {
+//   // 요청시 해당 파일의 id값을 쿼리로 붙여서 전달합니다.(선택된 파일을 DB에서 찾기 위해)
+//   // id를 사용해 데이터를 찾음
+//   const result = async () => {
+//     return await models.Files.findOne({
+//       where: { id: req.query.id },
+//     });
+//   };
 
-  result()
-    .then((d) => {
-      if (d != null) {
-        var filePath = d.dataValues.path;
-        var fileName = d.dataValues.filename;
-        const fireExistCheck = fs.existsSync(filePath);
-        if (fireExistCheck) {
-          var fileStream = fs.createReadStream(filePath);
-          fileStream.pipe(res);
-          res.setHeader(
-            "Content-Disposition",
-            "attachment;filename=" + encodeURI(fileName)
-          );
+//   result()
+//     .then((d) => {
+//       if (d != null) {
+//         var filePath = d.dataValues.path;
+//         var fileName = d.dataValues.filename;
+//         const fireExistCheck = fs.existsSync(filePath);
+//         if (fireExistCheck) {
+//           var fileStream = fs.createReadStream(filePath);
+//           fileStream.pipe(res);
+//           res.setHeader(
+//             "Content-Disposition",
+//             "attachment;filename=" + encodeURI(fileName)
+//           );
 
-          if (
-            d.extension === "jpeg" ||
-            d.extension === "png" ||
-            d.extension === "jpg"
-          ) {
-            res.setHeader("Content-Type", "image/png");
-          } else {
-            res.setHeader("Content-type", "video/mp4");
-          }
-        } else {
-          res.status(404).send("Not Fount File");
-        }
-      } else {
-        res.json({ status: "404" });
-      }
-    })
-    .catch((e) => {
-      res.status(404).send("Not Fount Recoder");
-    });
-});
+//           if (
+//             d.extension === "jpeg" ||
+//             d.extension === "png" ||
+//             d.extension === "jpg"
+//           ) {
+//             res.setHeader("Content-Type", "image/png");
+//           } else {
+//             res.setHeader("Content-type", "video/mp4");
+//           }
+//         } else {
+//           res.status(404).send("Not Fount File");
+//         }
+//       } else {
+//         res.json({ status: "404" });
+//       }
+//     })
+//     .catch((e) => {
+//       res.status(404).send("Not Fount Recoder");
+//     });
+// });
 
 // DB authentication
 sequelize.sequelize

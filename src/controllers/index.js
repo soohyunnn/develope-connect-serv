@@ -27,7 +27,7 @@ router.use("/api/subscribe", subscribe);
 
 router.use("/api/letter", letter);
 
-router.use("/api/file", file);
+// router.use("/api/file", file);
 
 router.use("/api/reply", reply);
 

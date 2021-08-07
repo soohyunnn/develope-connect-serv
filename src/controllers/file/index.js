@@ -1,8 +1,8 @@
-import { createThumbnail } from "./FileController";
-import { Router } from "express";
+// import { createThumbnail } from "./FileController";
+// import { Router } from "express";
 
-const router = Router();
+// const router = Router();
 
-router.post("/thumbnail", createThumbnail);
+// router.post("/thumbnail", createThumbnail);
 
-module.exports = router;
+// module.exports = router;
