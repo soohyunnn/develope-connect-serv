@@ -29,7 +29,7 @@ import {
   // updateDormancy,
 } from "./AccountController";
 
-import { kakao, facebook, naver, google, apple } from "./OauthController";
+// import { kakao, facebook, naver, google, apple } from "./OauthController";
 import { Router } from "express";
 const router = Router();
 
