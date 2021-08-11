@@ -9,9 +9,9 @@ ehthumbs.db
 Desktop.ini
 
 # npm
-node_modules
-package-lock.json
-*.log
-.env
+# node_modules
+# package-lock.json
+# *.log
+# .env
 
 build/**

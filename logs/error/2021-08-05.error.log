@@ -1,0 +1,23 @@
+2021-08-05 10:15:36 error: WarningService - create : Error: WHERE parameter "recipient_id" has invalid "undefined" value
+2021-08-05 10:15:36 error: error : Error: WHERE parameter "recipient_id" has invalid "undefined" value
+2021-08-05 10:15:48 error: WarningService - create : SequelizeDatabaseError: Unknown column 'Warning.offset' in 'where clause'
+2021-08-05 10:15:48 error: error : SequelizeDatabaseError: Unknown column 'Warning.offset' in 'where clause'
+2021-08-05 10:55:31 error: Excel is not defined
+2021-08-05 11:07:17 error: tutorials is not defined
+2021-08-05 12:27:11 error: XLSX is not defined
+2021-08-05 12:27:43 error: saveAs is not defined
+2021-08-05 12:36:05 error: xlsx is not defined
+2021-08-05 12:37:30 error: Worksheet with name |DOCTOR| already exists!
+2021-08-05 12:43:06 error: Cannot read property 'then' of undefined
+2021-08-05 13:05:26 error: XLSX is not defined
+2021-08-05 13:05:53 error: x.charCodeAt is not a function
+2021-08-05 13:07:45 error: f.slice is not a function
+2021-08-05 13:12:29 error: f.slice is not a function
+2021-08-05 13:23:50 error: Excel is not defined
+2021-08-05 13:48:27 error: models is not defined
+2021-08-05 13:49:03 error: Cannot read property 'map' of undefined
+2021-08-05 13:50:38 error: Cannot read property 'userId' of undefined
+2021-08-05 14:29:43 error: Op is not defined
+2021-08-05 17:32:59 error: e Error: WHERE parameter "user_id" has invalid "undefined" value
+2021-08-05 17:33:34 error: e Error: WHERE parameter "user_id" has invalid "undefined" value
+2021-08-05 17:35:59 error: e Error: WHERE parameter "user_id" has invalid "undefined" value

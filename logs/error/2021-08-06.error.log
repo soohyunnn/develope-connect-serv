@@ -1,0 +1,4 @@
+2021-08-06 20:15:00 error: e Error: Invalid value { title: 'aaa' }
+2021-08-06 20:17:13 error: e Error: Invalid value { title: 'aaa' }
+2021-08-06 20:38:35 error: e : ReferenceError: sequelize is not defined
+2021-08-06 21:22:19 error: e : ReferenceError: Sequelize is not defined

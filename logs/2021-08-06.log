@@ -1,0 +1,105 @@
+2021-08-06 11:44:15 info: Server listening on port 5000
+2021-08-06 11:45:33 info: Server listening on port 5000
+2021-08-06 12:48:30 info: Server listening on port 5000
+2021-08-06 12:52:58 info: Server listening on port 5000
+2021-08-06 12:56:10 info: Server listening on port 5000
+2021-08-06 13:06:49 info: Server listening on port 5000
+2021-08-06 13:10:54 info: Server listening on port 5000
+2021-08-06 13:13:15 info: Server listening on port 5000
+2021-08-06 13:17:53 info: Server listening on port 5000
+2021-08-06 13:22:16 info: Server listening on port 5000
+2021-08-06 20:09:33 info: Server listening on port 5000
+2021-08-06 20:13:17 info: Server listening on port 5000
+2021-08-06 20:14:27 info: Server listening on port 5000
+2021-08-06 20:15:00 info: 해시태그 검색 => {"keyword":"aaa"}
+2021-08-06 20:15:00 error: e Error: Invalid value { title: 'aaa' }
+2021-08-06 20:16:56 info: Server listening on port 5000
+2021-08-06 20:17:13 info: 해시태그 검색 => {"keyword":"aaa"}
+2021-08-06 20:17:13 error: e Error: Invalid value { title: 'aaa' }
+2021-08-06 20:19:19 info: Server listening on port 5000
+2021-08-06 20:19:27 info: 해시태그 검색 => {"keyword":"aaa"}
+2021-08-06 20:26:59 info: Server listening on port 5000
+2021-08-06 20:27:17 info: 레터 조회 (해시태그로) => req : [object Object]
+2021-08-06 20:28:15 info: Server listening on port 5000
+2021-08-06 20:28:19 info: 레터 조회 (해시태그로) => req : {"hashtag":"aaa"}
+2021-08-06 20:28:56 info: Server listening on port 5000
+2021-08-06 20:29:05 info: 레터 조회 (해시태그로) => req : {"hashtag":"aaa"}
+2021-08-06 20:29:42 info: 레터 조회 (해시태그로) => req : {"hashtag":"aaa"}
+2021-08-06 20:31:18 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 20:31:54 info: Server listening on port 5000
+2021-08-06 20:31:58 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 20:32:44 info: Server listening on port 5000
+2021-08-06 20:32:49 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 20:36:26 info: Server listening on port 5000
+2021-08-06 20:37:04 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 20:38:10 info: Server listening on port 5000
+2021-08-06 20:38:35 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 20:38:35 error: e : ReferenceError: sequelize is not defined
+2021-08-06 20:39:05 info: Server listening on port 5000
+2021-08-06 20:39:10 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 20:40:01 info: Server listening on port 5000
+2021-08-06 20:40:06 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 20:41:43 info: Server listening on port 5000
+2021-08-06 20:41:49 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 20:45:16 info: Server listening on port 5000
+2021-08-06 20:46:35 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:15:51 info: Server listening on port 5000
+2021-08-06 21:15:55 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:16:19 info: Server listening on port 5000
+2021-08-06 21:16:24 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:22:13 info: Server listening on port 5000
+2021-08-06 21:22:19 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:22:19 error: e : ReferenceError: Sequelize is not defined
+2021-08-06 21:22:59 info: Server listening on port 5000
+2021-08-06 21:23:04 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:25:06 info: Server listening on port 5000
+2021-08-06 21:25:10 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:25:35 info: Server listening on port 5000
+2021-08-06 21:25:42 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:26:19 info: Server listening on port 5000
+2021-08-06 21:26:23 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:26:48 info: Server listening on port 5000
+2021-08-06 21:26:51 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:27:25 info: Server listening on port 5000
+2021-08-06 21:27:31 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:33:09 info: Server listening on port 5000
+2021-08-06 21:33:16 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:35:00 info: Server listening on port 5000
+2021-08-06 21:35:10 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:47:42 info: Server listening on port 5000
+2021-08-06 21:47:45 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:48:45 info: Server listening on port 5000
+2021-08-06 21:48:48 info: 레터 조회 (해시태그로) => req : {"hashtag":"vidoe"}
+2021-08-06 21:51:03 info: Server listening on port 5000
+2021-08-06 21:51:06 info: 레터 조회 (해시태그로) => req : {"hashtag":"aa"}
+2021-08-06 21:51:11 info: 레터 조회 (해시태그로) => req : {"hashtag":"aa"}
+2021-08-06 21:52:25 info: Server listening on port 5000
+2021-08-06 21:52:28 info: 레터 조회 (해시태그로) => req : {"hashtag":"aa"}
+2021-08-06 21:52:34 info: 레터조회 data [{"id":153,"title":"영상","content":"영상","senderUser":{"id":32,"imageId":[561,554,560,556],"userId":"kakaoTest1","name":"카카오"},"recipientUser":{"id":42,"imageId":[557,554],"userId":"soohyunnn12","name":"👩🏻‍💻수현"},"createdAt":"2021-08-04T02:36:22.000Z","replyYn":false,"readYn":false,"status":true,"fileIds":[576],"thumbnailId":575,"fileInfoList":[{"id":576,"contentType":"video/mp4"}]},{"id":152,"title":"테스트","content":"전체공개","senderUser":{"id":32,"imageId":[561,554,560,556],"userId":"kakaoTest1","name":"카카오"},"recipientUser":{"id":42,"imageId":[557,554],"userId":"soohyunnn12","name":"👩🏻‍💻수현"},"createdAt":"2021-08-04T02:10:21.000Z","replyYn":false,"readYn":false,"status":true,"fileIds":[572],"thumbnailId":571,"fileInfoList":[{"id":572,"contentType":"video/mp4"}]}]
+2021-08-06 21:53:02 info: 회원 목록 조회
+2021-08-06 21:53:02 info: account
+2021-08-06 21:54:39 info: Server listening on port 5000
+2021-08-06 21:54:49 info: 레터 조회 (해시태그로) => req : {"hashtag":"aa"}
+2021-08-06 21:55:17 info: Server listening on port 5000
+2021-08-06 21:55:19 info: 회원 목록 조회
+2021-08-06 21:55:19 info: account
+2021-08-06 21:55:54 info: Server listening on port 5000
+2021-08-06 21:55:57 info: 레터 조회 (해시태그로) => req : {"hashtag":"aa"}
+2021-08-06 21:57:06 info: Server listening on port 5000
+2021-08-06 21:57:17 info: 레터 조회 (해시태그로) => req : {"keyword":"aa"}
+2021-08-06 21:58:30 info: Server listening on port 5000
+2021-08-06 21:58:36 info: 레터 조회 (해시태그로) => req : {"keyword":"aa"}
+2021-08-06 22:00:25 info: Server listening on port 5000
+2021-08-06 22:00:28 info: 레터 조회 (해시태그로) => req : {"keyword":"aa"}
+2021-08-06 22:00:34 info: 레터 조회 (해시태그로) => req : {"keyword":"ggg"}
+2021-08-06 22:00:38 info: 레터 조회 (해시태그로) => req : {"keyword":"나는"}
+2021-08-06 22:01:44 info: Server listening on port 5000
+2021-08-06 22:01:49 info: 레터 조회 (해시태그로) => req : {"keyword":"나는"}
+2021-08-06 22:01:56 info: 레터 조회 (해시태그로) => req : {"keyword":"aa"}
+2021-08-06 22:02:16 info: 레터 조회 (해시태그로) => req : {"keyword":"aa"}
+2021-08-06 22:02:41 info: 회원 목록 조회
+2021-08-06 22:02:42 info: account
+2021-08-06 22:03:47 info: 레터 조회 (해시태그로) => req : {"keyword":"aa"}
+2021-08-06 22:04:20 info: 레터 조회 (해시태그로) => req : {"keyword":"aa"}
+2021-08-06 22:06:09 info: Server listening on port 5000
+2021-08-06 22:06:13 info: 레터 조회 (해시태그로) => req : {"keyword":"aa"}
